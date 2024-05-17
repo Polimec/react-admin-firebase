@@ -53,11 +53,9 @@ export class FirebaseWrapper implements IFirebaseWrapper {
       optionsSafe
     );
 
-    console.log('firebaseConfig', firebaseConfig);
-    console.log('getFirestore', getFirestore);
     this._firestore = (getFirestore as any)(
       this._app,
-      (firebaseConfig as any).database || ''
+      (firebaseConfig as any).databaseId || ''
     );
     this._storage = getStorage(this._app);
     this._auth = getAuth(this._app);
