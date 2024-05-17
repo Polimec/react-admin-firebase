@@ -11,8 +11,9 @@ node_modules
 /build
 
 # ignore dist now
-/dist
-dist
+# /dist
+# dist
+# quick hack fix, include dist because we pull .git
 
 #ide
 .idea
